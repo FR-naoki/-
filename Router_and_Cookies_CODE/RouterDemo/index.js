@@ -4,6 +4,13 @@ const shelterRoutes = require('./routes/shelters');
 const dogRoutes = require('./routes/dogs');
 const adminRoutes = require('./routes/admin');
 
+// app.use((req, res, next) => {
+//     if (req.query.isAdmin) {
+//        return next();
+//     }
+//     res.send(`Not Admin!!!`);
+// });
+
 app.use('/shelters', shelterRoutes);
 app.use('/dogs', dogRoutes);
 app.use(`/admin`, adminRoutes);
