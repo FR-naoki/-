@@ -16,7 +16,8 @@ app.get('/setname', (req, res) => {
 });
 
 app.get('/getsignedcookie', (req, res) => {
-    res.cookie(`fruit`, `grape`)
+    res.cookie(`fruit`, `grape`, { signed: true });
+    res.send(`署名付きクッキーを返したよ！！`);
 });
 
 app.listen(3000, () => {
