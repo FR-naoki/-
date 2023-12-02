@@ -11,7 +11,7 @@ app.use(flash());
 
 const Farm = require('./models/farm');
 
-mongoose.connect('mongodb://localhost:27017/flashDemo', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb://127.0.0.1:27017/flashDemo', { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
         console.log('MongoDBコネクションOK！！');
     })
